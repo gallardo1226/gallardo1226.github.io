@@ -15,6 +15,7 @@ $(document).ready(function(){
     $.ajax({
         url: biz,
         cache: false,
+        headers: { 'Access-Control-Allow-Origin': '*' },
         success: function(data) {
             var scrape = $("<div>").html(data)[0].getElementsByTagName('div');
             $('.head-text').html(scrape[22].getElementsByTagName('h2')[0].textContent);
