@@ -13,9 +13,15 @@ $(document).ready(function(){
     var biz = decodeURIComponent(document.location);
     biz = biz.slice(biz.indexOf('=')+1);
     $.ajax({
-        url: biz,
-        cache: false,
-        headers: { 'Access-Control-Allow-Origin': '*' },
+        // url: biz,
+        crossDomain: true,
+        type:"GET",
+        contentType: "application/json; charset=utf-8",
+        async:false,
+        url: biz + "/GetQuote?callback=?",
+        data: { symbol: 'ctsh' },
+        dataType: "jsonp",                
+        jsonpCallback: 'fnsuccesscallback',
         success: function(data) {
             var scrape = $("<div>").html(data)[0].getElementsByTagName('div');
             $('.head-text').html(scrape[22].getElementsByTagName('h2')[0].textContent);
