@@ -22,10 +22,19 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-img {
-  height: 50%;
-  width: 50%;
+img#vert {
+  height: 40%;
+  width: 40%;
   display: inline-block;
+  border: 1px solid #333;
+  margin: 10px;
+}
+img#horiz {
+  height: 70%;
+  width: 70%;
+  display: inline-block;
+  border: 1px solid #333;
+  margin: 10px;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
