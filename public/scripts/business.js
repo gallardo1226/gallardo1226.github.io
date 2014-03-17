@@ -14,7 +14,7 @@ $(document).ready(function(){
     biz = biz.slice(biz.indexOf('=')+1);
     $.ajax({
         url: biz,
-        dataType: 'jsonp',
+        // dataType: 'jsonp',
         crossDomain: true,
         cache: false,
         success: function(data) {
